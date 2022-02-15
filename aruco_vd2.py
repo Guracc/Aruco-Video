@@ -31,19 +31,21 @@ ARUCO_DICT = {
 }
 
 def main():
-  """
-  Main method of the program.
-  """
+
   # Costante di ingrandimento dell'immagine
   ingrandimento = int(1500)
-  args = {
+
+  # Dizionario 
+  DICT = {
     "scoiattolo": "squirrel.jpg",
     "canyon": "canyon.jpg",
     "luna": "luna.jpg"
     }
-  scoiattolo = cv2.imread(args["scoiattolo"])
-  luna = cv2.imread(args["luna"])
-  canyon = cv2.imread(args["canyon"])
+  
+  # Importo immagini
+  scoiattolo = cv2.imread(DICT["scoiattolo"])
+  luna = cv2.imread(DICT["luna"])
+  canyon = cv2.imread(DICT["canyon"])
   color = ()
 
   # Controlla se l'aurco marker è corretto
@@ -59,18 +61,18 @@ def main():
   this_aruco_parameters = cv2.aruco.DetectorParameters_create()
    
   # Inizia lo stream video [VideoCapture(0)=Webcam incorporata, da fare droidcam]
-  cap = cv2.VideoCapture(0)
+  cap = cv2.VideoCapture(1)
 
   # Cache strana
   cache = []
   cachi = []
 
+  # Variabili fps
   count = int(0)
   skip = False
   tempo_frame_nuovo=0
   tempo_frame_old=0
   font = cv2.FONT_HERSHEY_SIMPLEX
-
   fpsm=0
   fpsmi=100
 
@@ -95,7 +97,7 @@ def main():
       count=0   
 
     # Controllo cache migliorata e se vengono trovati dei corners
-    if count<15 and len(corners)!=0:
+    if count < 15 and len(corners) != 0:
       # Flatten the ArUco IDs list
       ids = ids.flatten()
       
@@ -124,7 +126,7 @@ def main():
         (top_left, top_right, bottom_right, bottom_left) = corners
 
         # Convert the (x,y) coordinate pairs to integers
-        # diff = (int(top_right[0])-int(top_left[0]))
+        # diff = (int(top_right[0])-int(top_left[0])) = calcolo distanza con cateto (metodo outdated)
 
         diff = np.sqrt(((top_right[0] - top_left[0])**2) + ((top_right[1] - top_left[1])**2))
         if top_right[1]>bottom_right[1]:
@@ -194,8 +196,8 @@ def main():
   # Close down the video stream
   cap.release()
   cv2.destroyAllWindows()
-  print("fps massimi: "+fpsm)
-  print("fps minimi: "+fpsmi)
+  print("fps massimi: "+str(fpsm))
+  print("fps minimi: "+str(fpsmi))
    
 if __name__ == '__main__':
   print(__doc__)
