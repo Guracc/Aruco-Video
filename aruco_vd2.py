@@ -35,7 +35,7 @@ def main():
   Main method of the program.
   """
   # Costante di ingrandimento dell'immagine
-  ingrandimento = int(1500)
+  ingrandimento = int(1200)
   args = {
     "scoiattolo": "squirrel.jpg",
     "canyon": "canyon.jpg",
