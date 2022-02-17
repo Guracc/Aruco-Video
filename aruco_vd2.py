@@ -33,7 +33,7 @@ ARUCO_DICT = {
 def main():
 
   # Costante di ingrandimento dell'immagine
-  ingrandimento = int(1200)
+  ingrandimento = int(1500)
 
   # Dizionario 
   DICT = {
@@ -188,8 +188,7 @@ def main():
 
     cv2.imshow("OpenCV AR Output", frame)      
 
-    # If "q" is pressed on the keyboard, 
-    # exit this loop
+    # Se "q" viene premuto il programma si chiude
     if cv2.waitKey(1) & 0xFF == ord('q'):
       break
   
