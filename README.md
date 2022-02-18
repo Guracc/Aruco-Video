@@ -1,4 +1,4 @@
-# Seagull AR      	![logo](logo.png)
+# Seagull AR      	![logo](logo.png | width = 100)
 
 ### OBIETTIVO E APPLICAZIONE:
 
