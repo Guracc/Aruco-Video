@@ -1,11 +1,28 @@
-# Aruco-Video
+# Seagull AR      	![logo](logo.png | width = 100)
 
-- obiettivo e applicazione del progetto nella vita quotidiana:
-    il nostro progetto prevede l'inserimento di aruco marker in luoghi come  musei, acquari, e così via, con uno scopo educativo.
-    noi in particolare abbiamo simulato l'implementazione di tutto questo all'acquario di genova.
+### OBIETTIVO E APPLICAZIONE:
 
-- elenco delle modifiche fatte al codice dal punto di vista tecnico (chiedi ad Andrea):
-    per esempio la roba della  cache migliorata, rendere il tutto real time, e il discorso della costante d'ingrandimento per far sì che l'immagine si ingrandisca allontanando l'aruco e si rimpicciolisca quando lo si avvicina.
-    
-- difficoltà e ostacoli incontrati (di nuovo chiedi ad Andrea siccome ha fatto lui la parte di codice):
-    secondo me sarebbe carino spiegare gli ostacoli più grandi incontrati nella stesura e nella modifica del codice, e soprattutto come sono stati superati.
+- L’obiettivo e applicazione del progetto nella vita quotidiana:
+- Il nostro progetto prevede la sistemazione di aruco marker in luoghi come musei, acquari, e così via, con uno scopo educativo, per mostrare immagini o video supplementari alle     descrizioni già presenti.
+- Noi in particolare abbiamo simulato l'implementazione di tutto questo in un acquario.
+
+
+### MODIFICHE FATTE AL CODICE:
+
+- Contatore di FPS (con colore variabile)
+- Input video via webcam in real time
+- Ridimensionamento immagine direttamente proporzionale alla distanza
+- Caching per stabilizzazione output video
+- Immagini variabili in base all’ID Aruco
+- Utilizzo di un singolo Aruco marker come sorgente
+
+   
+ ### DIFFICOLTÀ E OSTACOLI
+
+- Abbiamo provato a implementare il multithreading per il codice però è risultato particolarmente complesso e sarebbe servito più tempo per svilupparlo
+- L’idea alla base sarebbe stata quella di rendere compatibile il programma con i dispositivi mobile, ovviamente il tempo e le nostre conoscenze non sono bastate per raggiungere questo obiettivo
+- Difficoltà all’approccio con la libreria cv2
+- Difficoltà di risorse (fps troppo bassi senza multithread)
+
+### Link per la presentazione progetto:
+ https://docs.google.com/presentation/d/1rHU3AESDdcaIuzwY0FAkXYkTqgOhvyEIYkXv9lDDB1s/edit?usp=sharing
