@@ -1,4 +1,4 @@
-# Seagull AR      	[Alt text](/logo.png?raw=true "Seagull AR")
+# [Seagull AR](/logo.png?raw=true "Seagull AR")
 
 ### OBIETTIVO E APPLICAZIONE:
 
