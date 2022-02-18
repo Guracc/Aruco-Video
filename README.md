@@ -24,6 +24,7 @@
     - Difficoltà all’approccio con la libreria cv2
     - Difficoltà di risorse (fps troppo bassi senza multithread)
 
+![This is an image](https://drive.google.com/file/d/1VfAuxH26U5YRXMvLBfcXsjBT1Rrch90f/preview)
     
-Link per la presentazione progetto:
-### https://docs.google.com/presentation/d/1rHU3AESDdcaIuzwY0FAkXYkTqgOhvyEIYkXv9lDDB1s/edit?usp=sharing
+### Link per la presentazione progetto:
+#### https://docs.google.com/presentation/d/1rHU3AESDdcaIuzwY0FAkXYkTqgOhvyEIYkXv9lDDB1s/edit?usp=sharing
