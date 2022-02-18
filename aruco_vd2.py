@@ -38,15 +38,15 @@ def main():
 
   # Dizionario
   DICT = {
-      "scoiattolo": "squirrel.jpg",
-      "canyon": "canyon.jpg",
-      "luna": "luna.jpg"
+      "narvalo": "narvalo.jpg",
+      "delfino": "delfino.jpg",
+      "gabbiano": "gabbiano.jpg"
   }
 
   # Importo immagini
-  scoiattolo = cv2.imread(DICT["scoiattolo"])
-  luna = cv2.imread(DICT["luna"])
-  canyon = cv2.imread(DICT["canyon"])
+  narvalo = cv2.imread(DICT["narvalo"])
+  gabbiano = cv2.imread(DICT["gabbiano"])
+  delfino = cv2.imread(DICT["delfino"])
   color = ()
 
   # Controlla se l'aurco marker è corretto
@@ -105,16 +105,16 @@ def main():
       ids = ids.flatten()
 
       if ids[0] == 1007:
-        source_image = scoiattolo
+        source_image = narvalo
       elif ids[0] == 150:
-        source_image = canyon
+        source_image = delfino
       elif ids[0] == 1001:
-        source_image = luna
+        source_image = gabbiano
       else:
         print("ERRORE")
         print(ids[0])
         skip = True
-        # Da discutere se fare break oppure se mostrare foto Pesce Luna
+        # Da discutere se fare break oppure se mostrare foto Pesce gabbiano
 
       # Loop dei corners
       for (marker_corner, marker_id) in zip(corners, ids):
